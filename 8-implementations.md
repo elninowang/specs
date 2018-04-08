@@ -1,9 +1,13 @@
-8 Implementations
+8 Implementations 实现
 =================
 
 A `libp2p` implementation should (recommended) follow a certain level of granulatiry when implementing different modules and functionalities, so that common interfaces are easy to expose, test and check for interoperability with other implementations.
 
+在实现不同的模块和功能时，应该（推荐）实施一个`libp2p`实现，以便公共接口很容易公开，测试和检查与其他实现的互操作性。
+
 This is the list of current modules available for `libp2p`:
+
+这是`libp2p`可用的当前模块列表：
 
   - libp2p (entry point)
   - **Swarm**
@@ -50,6 +54,8 @@ This is the list of current modules available for `libp2p`:
 
 Current known implementations (or WIP) are:
 
+目前已知的实施（或WIP）是：
+
   - JavaScript - <https://github.com/diasdavid/js-libp2p>
   - Go - <https://github.com/ipfs/go-libp2p>
   - Python - <https://github.com/candeira/py-ipfs/blob/readme-roadmap/README.md>
@@ -60,6 +66,8 @@ Current known implementations (or WIP) are:
 ### 8.1.1 Swarm Dialer
 
 The swarm dialer manages making a successful connection to a target peer, given a stream of addresses as inputs, and making sure to respect any and all rate limits imposed. To this end, we have designed the following logic for dialing:
+
+Swarm拨号程序管理与目标peer的成功连接，给定一系列地址作为输入，并确保遵守所有速率限制。 为此，我们设计了以下拨号逻辑：
 
 ```
 DialPeer(peerID) {
